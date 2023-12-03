@@ -1,4 +1,5 @@
-import CheckBox from "../Icons/EditIcon";
+
+//component for Editing rows
 const EditRow = ({handleEditonSubmit,editRowdata,handleEditRowchange}) => {
     return ( <>
     

@@ -1,6 +1,6 @@
 
 import './App.css'
-import Userdata from './components/Table'
+import Table from './components/Table'
 import Searchbar from './components/UI/SearchBar'
 import { useState } from 'react'
 import SwitchDark from './components/UI/SwitchDark'
@@ -8,14 +8,16 @@ import SwitchLight from './components/UI/SwitchLight'
 
 
 function App() {
+  //state variables
   const [query, setQuery] = useState("");
   const [userdata, setUserdata] = useState([]);
   const [isChecked, setisChecked] = useState([]);
   const [selectAll, setSelectAll] = useState(false)
   const [dark, setDark] = useState(false)
+  
+  //handling deletion for selected items
   const hanndledeleteSelected = () => {
-
- const newUserdata = userdata.filter((user) => !isChecked.includes(user.id));
+  const newUserdata = userdata.filter((user) => !isChecked.includes(user.id));
   setUserdata(newUserdata);
   setisChecked([]);
   setSelectAll(false)
@@ -36,7 +38,7 @@ function App() {
           <div className='mb-2 dark:text-white '>
             <Searchbar setUserdata={setUserdata} setQuery={setQuery} hanndledeleteSelected={hanndledeleteSelected} />
           </div>
-          <Userdata isChecked={isChecked} setisChecked={setisChecked} selectAll={selectAll} setSelectAll={setSelectAll} userdata={userdata} setUserdata={setUserdata} query={query} />
+          <Table isChecked={isChecked} setisChecked={setisChecked} selectAll={selectAll} setSelectAll={setSelectAll} userdata={userdata} setUserdata={setUserdata} query={query} />
         </div>
 
 

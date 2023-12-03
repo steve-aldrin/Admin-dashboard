@@ -1,5 +1,5 @@
 import Facefrown from "../Icons/Facefrown";
-
+//ui compoenent for toggling to light mode
 const SwitchLight = () => {
     return ( <>
         <div className="flex items-center gap-2 border dark:bg-indigo-500  p-1 rounded-md ">

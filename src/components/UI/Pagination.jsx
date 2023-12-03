@@ -3,6 +3,7 @@ import Leftdoublearrow from "../Icons/Leftdoublearrow";
 import RightDoublearrow from "../Icons/RightDoublearrow";
 import Rightarrow from "../Icons/Rightarrow";
 
+//component to handle pagination and display pagenumbers
 const Pagination = ({recordsPerpage,totalRecords,Movetopage,Nextpage,Prevpage,currentPage}) => {
     const pageNumbers=[];
     for(let i=1;i<=Math.ceil(totalRecords/recordsPerpage);i++){

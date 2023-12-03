@@ -6,9 +6,11 @@ import React from 'react';
 import { useData } from "./hooks/useData";
 import useTableData from './hooks/useTable';
 import { useSelect } from './hooks/useSelect';
-const Userdata = ({ isChecked, setisChecked, selectAll, setSelectAll, userdata, setUserdata, query }) => {
 
+//table component 
+const Table = ({ isChecked, setisChecked, selectAll, setSelectAll, userdata, setUserdata, query }) => {
 
+ //state variables
     const [currentPage, SetcurrentPage] = useState(1);
     const [recordsPerpage, Setrecordsperpage] = useState(10)
     const [editContactId, setContactId] = useState("");
@@ -20,6 +22,8 @@ const Userdata = ({ isChecked, setisChecked, selectAll, setSelectAll, userdata, 
 
         }
     )
+
+    //using custom components 
     const { isLoading, error } = useData(setUserdata);
     const { handleDeleteClick, search, handleEditonSubmit, handleEditRowchange, handleEditClick } = useTableData(setUserdata, setContactId, seteditRowdata, query)
 
@@ -27,7 +31,7 @@ const Userdata = ({ isChecked, setisChecked, selectAll, setSelectAll, userdata, 
 
 
 
-
+  //Creating functions handling page switch
     const indexLastrecord = currentPage * recordsPerpage;
     const indexFirstrecord = indexLastrecord - recordsPerpage;
 
@@ -41,6 +45,8 @@ const Userdata = ({ isChecked, setisChecked, selectAll, setSelectAll, userdata, 
         if (currentPage != number) SetcurrentPage(currentPage - 1);
     }
 
+
+   //Loading and error messages
     if (isLoading) return <div> Loading...</div>
     if (error) {
         return <div>Error: {error.message}</div>;
@@ -96,4 +102,4 @@ const Userdata = ({ isChecked, setisChecked, selectAll, setSelectAll, userdata, 
     );
 }
 
-export default Userdata;
+export default Table;

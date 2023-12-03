@@ -1,7 +1,8 @@
-import { useState } from "react";
-import CheckBox from "../Icons/EditIcon";
+
 import EditIcon from "../Icons/EditIcon";
 import DeleteIcon from "../Icons/Deleteicon";
+
+//component for displaying rows
 const DisplayRow = ({isChecked,handleCheck,handleDeleteClick,handleEditClick,data}) => {
 
    return ( <>

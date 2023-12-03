@@ -1,3 +1,4 @@
+//custom hook for table manipulation
 export const useTableData = (setUserdata,setContactId,seteditRowdata,query) => {
     const  handleDeleteClick=(rowId)=>{
 

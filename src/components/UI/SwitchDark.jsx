@@ -1,5 +1,5 @@
 import Facesmile from "../Icons/Facesmile";
-
+//ui compoenent for toggling to dark mode
 const SwitchDark = () => {
     return (
         <>

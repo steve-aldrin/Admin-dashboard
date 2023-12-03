@@ -1,6 +1,8 @@
 import DeleteIcon from "../Icons/Deleteicon";
 import SearchIcon from "../Icons/SearchIcon";
 
+
+//UI Component for Searchbar
 const Searchbar = ({hanndledeleteSelected,setQuery}) => {
     
 
