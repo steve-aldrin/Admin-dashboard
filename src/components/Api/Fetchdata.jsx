@@ -1,6 +1,6 @@
 import axios from 'axios';
 export async function getData(){
-    const res = await axios.get("https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json");
+    const res = await axios.get(import.meta.env.VITE_API_URL);
 
     return res.data;
    

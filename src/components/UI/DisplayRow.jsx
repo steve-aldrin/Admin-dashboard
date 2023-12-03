@@ -14,7 +14,7 @@ const DisplayRow = ({isChecked,handleCheck,handleDeleteClick,handleEditClick,dat
                
                 <td> 
                <div className="flex gap-2  ">
-                   <div className="p-1 my-3 rounded-md border border-slate-200 dark:bg-indigo-500" ><button className="edit" onClick={(event) => handleEditClick(event, data)}><EditIcon /> </button></div>
+                   <div className="p-1 my-3 rounded-md border border-slate-200 dark:bg-indigo-500 dark:text-white" ><button className="edit" onClick={(event) => handleEditClick(event, data)}><EditIcon /> </button></div>
                    <div className="p-1 my-3 rounded-md border border-slate-200   text-red-500  dark:text-white dark:bg-indigo-500">   <button className="delete" onClick={() => { handleDeleteClick(data.id) }}><DeleteIcon/></button></div>
                </div>
 

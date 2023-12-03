@@ -1,11 +1,8 @@
 
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Userdata from './components/Table'
 import Searchbar from './components/UI/SearchBar'
 import { useState } from 'react'
-import Facefrown from './components/Icons/Facefrown'
 import SwitchDark from './components/UI/SwitchDark'
 import SwitchLight from './components/UI/SwitchLight'
 
@@ -23,6 +20,9 @@ function App() {
   setisChecked([]);
   setSelectAll(false)
   }
+
+
+
   return (
     <div className={dark ? " dark box bg-slate-800 overflow-auto min-h-screen" : "overflow-auto min-h-screen"}>
       <div className='h-full dark:  overflow-auto'>
